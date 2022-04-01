@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.order.OrderFragment">
+
+    <Button
+        android:id="@+id/order_food_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="24dp"
+        android:layout_marginRight="24dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/main"
+        android:text="Ksh. 120.00"
+        android:fontFamily="@font/adamina"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:cornerRadius="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintDimensionRatio="w,"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/order_food_table_number_minus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_minus"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toStartOf="@+id/order_table_number"
+        app:layout_constraintHorizontal_chainStyle="spread"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <ImageView
+        android:id="@+id/order_food_table_number_add"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="@+id/order_table_number"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/order_table_number"
+        app:layout_constraintTop_toTopOf="@+id/order_table_number" />
+
+    <ImageView
+        android:id="@+id/order_food_quantity_minus"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_minus"
+        app:layout_constraintEnd_toStartOf="@+id/order_food_quantity_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <ImageView
+        android:id="@+id/order_food_quantity_add"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_add"
+        app:layout_constraintBottom_toBottomOf="@+id/order_food_quantity"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/order_food_quantity_minus"
+        app:layout_constraintTop_toTopOf="@+id/order_food_quantity" />
+
+    <ImageView
+        android:id="@+id/order_hotel_pic"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/food_tv"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="Food"
+        android:fontFamily="@font/adamina"
+        android:layout_marginTop="8dp"
+        android:textColor="@color/main"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_food_pic" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/order_food_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center_horizontal"
+        android:text="Ugali Mix"
+        android:fontFamily="@font/adamina"
+        android:textColor="#000000"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintEnd_toEndOf="@+id/food_tv"
+        app:layout_constraintStart_toStartOf="@+id/food_tv"
+        app:layout_constraintTop_toBottomOf="@+id/food_tv" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView4"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+        android:text="Table Number"
+        android:fontFamily="@font/adamina"
+        android:textColor="@color/main"
+        android:textSize="18sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="@+id/order_food_name"
+        app:layout_constraintStart_toStartOf="@+id/order_food_name"
+        app:layout_constraintTop_toBottomOf="@+id/order_food_name" />
+
+    <TextView
+        android:id="@+id/order_table_number"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/order_food_table_number_minus"
+        app:layout_constraintEnd_toStartOf="@+id/order_food_table_number_add"
+        app:layout_constraintStart_toEndOf="@+id/order_food_table_number_minus"
+        app:layout_constraintTop_toTopOf="@+id/order_food_table_number_minus" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/textView6"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Quantity"
+        android:fontFamily="@font/adamina"
+        android:textColor="@color/main"
+        android:textSize="18sp"
+        android:gravity="center_horizontal"
+        android:textStyle="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_food_table_number_add" />
+
+    <TextView
+        android:id="@+id/order_food_quantity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="1"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/order_food_quantity_minus"
+        app:layout_constraintEnd_toStartOf="@+id/order_food_quantity_add"
+        app:layout_constraintStart_toEndOf="@+id/order_food_quantity_minus"
+        app:layout_constraintTop_toTopOf="@+id/order_food_quantity_minus" />
+
+    <ImageView
+        android:id="@+id/order_food_pic"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/food"
+        app:layout_constraintBottom_toBottomOf="@+id/order_hotel_pic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/order_hotel_pic"
+        app:layout_constraintTop_toBottomOf="@+id/order_hotel_pic" />
+</androidx.constraintlayout.widget.ConstraintLayout>

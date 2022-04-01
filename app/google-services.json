@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "244351421709",
+    "project_id": "chakulapap-bb8fe",
+    "storage_bucket": "chakulapap-bb8fe.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:244351421709:android:b34fc4496a688d23067444",
+        "android_client_info": {
+          "package_name": "com.ramgdev.chakulapap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "244351421709-voju1tcgf0n1f7snp4bh2277nl8suot0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAbGxIt_RoXTsWOpyyR5PtlceHgmXNMrOU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "244351421709-voju1tcgf0n1f7snp4bh2277nl8suot0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
