@@ -7,6 +7,7 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.fragment.findNavController
 import com.ramgdev.chakulapap.R
+import com.ramgdev.chakulapap.utils.changeStatusBar
 
 class MainActivity : AppCompatActivity() {
     private lateinit var navController: NavController
@@ -21,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         navController = navHostFragment.findNavController()
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            //changeStatusBar(true)
+            changeStatusBar(true)
         }
 
     }
