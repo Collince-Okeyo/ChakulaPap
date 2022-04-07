@@ -37,7 +37,7 @@
             android:textSize="16sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/hotelRecycler" />
+            app:layout_constraintTop_toBottomOf="@+id/popularHotelRecycler" />
 
         <TextView
             android:id="@+id/tvPopular"
@@ -59,9 +59,9 @@
 
 
         <com.cooltechworks.views.shimmer.ShimmerRecyclerView
-            android:id="@+id/otherHotelRecycler"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:id="@+id/hotelsRecycler"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
             android:layout_marginTop="10dp"
             android:nestedScrollingEnabled="false"
             android:orientation="vertical"
@@ -78,20 +78,22 @@
             tools:listitem="@layout/other_hotels_row" />
 
         <com.cooltechworks.views.shimmer.ShimmerRecyclerView
-            android:id="@+id/hotelRecycler"
+            android:id="@+id/popularHotelRecycler"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
             android:orientation="horizontal"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintEnd_toEndOf="@+id/tvPopular"
+            app:layout_constraintStart_toStartOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/textView"
             app:shimmer_demo_angle="20"
             app:shimmer_demo_child_count="3"
             app:shimmer_demo_grid_child_count="2"
             app:shimmer_demo_layout="@layout/horizontal_shimmer_layout"
             app:shimmer_demo_layout_manager_type="linear_horizontal"
-            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            app:layout_constraintEnd_toEndOf="@+id/tvPopular"
-            app:layout_constraintStart_toStartOf="@+id/textView"
-            app:layout_constraintTop_toBottomOf="@+id/textView"
             tools:listitem="@layout/hotels_row" />
 
         <com.google.android.material.textfield.TextInputLayout

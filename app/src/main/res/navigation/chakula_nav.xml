@@ -16,6 +16,9 @@
         <action
             android:id="@+id/action_dashboardFragment_to_menuFragment"
             app:destination="@id/menuFragment" />
+        <action
+            android:id="@+id/action_dashboardFragment_to_orderFragment"
+            app:destination="@id/orderFragment" />
     </fragment>
     <fragment
         android:id="@+id/menuFragment"
@@ -24,16 +27,30 @@
         <action
             android:id="@+id/action_menuFragment_to_orderFragment"
             app:destination="@id/orderFragment" />
+        <argument
+            android:name="hotelargs"
+            app:argType="com.ramgdev.chakulapap.model.HotelModel" />
+        <action
+            android:id="@+id/action_menuFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
     </fragment>
     <fragment
         android:id="@+id/confirmationCustomDialogFragment2"
         android:name="com.ramgdev.chakulapap.ui.order.ConfirmationCustomDialogFragment"
-        android:label="ConfirmationCustomDialogFragment" />
+        android:label="ConfirmationCustomDialogFragment" >
+        <argument
+            android:name="confirmDetails"
+            app:argType="com.ramgdev.chakulapap.model.Order" />
+    </fragment>
     <fragment
         android:id="@+id/hotelFragment"
         android:name="com.ramgdev.chakulapap.ui.home.HotelFragment"
         android:label="fragment_hotel"
-        tools:layout="@layout/fragment_hotel" />
+        tools:layout="@layout/fragment_hotel" >
+        <action
+            android:id="@+id/action_hotelFragment_to_dashboardFragment"
+            app:destination="@id/dashboardFragment" />
+    </fragment>
     <fragment
         android:id="@+id/orderFragment"
         android:name="com.ramgdev.chakulapap.ui.order.OrderFragment"
@@ -42,6 +59,12 @@
         <action
             android:id="@+id/action_orderFragment_to_confirmationCustomDialogFragment2"
             app:destination="@id/confirmationCustomDialogFragment2" />
+        <argument
+            android:name="food_order"
+            app:argType="com.ramgdev.chakulapap.model.MenuItems" />
+        <argument
+            android:name="hotel_details"
+            app:argType="com.ramgdev.chakulapap.model.HotelModel" />
     </fragment>
     <fragment
         android:id="@+id/splashFragment"
@@ -51,11 +74,13 @@
         <action
             android:id="@+id/action_splashFragment_to_viewPagerFragment"
             app:destination="@id/viewPagerFragment"
-            app:popUpTo="@id/splashFragment"
-            app:popUpToInclusive="true" />
+            app:popUpTo="@id/chakula_nav"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_splashFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/chakula_nav"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/viewPagerFragment"
@@ -64,6 +89,8 @@
         tools:layout="@layout/fragment_view_pager" >
         <action
             android:id="@+id/action_viewPagerFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/chakula_nav"
+            app:popUpToInclusive="false" />
     </fragment>
 </navigation>

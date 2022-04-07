@@ -33,12 +33,14 @@
         app:layout_constraintStart_toStartOf="@+id/imageView"
         app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="16dp"
-        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation "
+        android:fontFamily="@font/adamina"
+        android:text="Get served instantly after ordering with Chakula Pap. Enjoy your meal with Chakula Pap
+🍔 "
         android:textAlignment="center"
         android:textColor="@color/black"
         android:textSize="18dp"
@@ -48,7 +50,7 @@
 
     <Button
         android:id="@+id/buttonNext1"
-        android:layout_width="wrap_content"
+    android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
         android:layout_marginRight="24dp"
