@@ -10,6 +10,7 @@ import androidx.navigation.fragment.findNavController
 import com.google.firebase.database.*
 import com.ramgdev.chakulapap.adapter.HotelAdapter
 import com.ramgdev.chakulapap.adapter.MenuAdapter
+import com.ramgdev.chakulapap.adapter.PopularHotelAdapter
 import com.ramgdev.chakulapap.databinding.FragmentDashboardBinding
 import com.ramgdev.chakulapap.model.HotelModel
 
@@ -22,7 +23,7 @@ class DashboardFragment : Fragment() {
 
     private lateinit var hotelAdapter: HotelAdapter
     private lateinit var menuAdapter: MenuAdapter
-    private lateinit var popularHotelAdapter: HotelAdapter
+    private lateinit var popularHotelAdapter: PopularHotelAdapter
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -39,7 +40,7 @@ class DashboardFragment : Fragment() {
             findNavController().navigate(action)
         })
 
-        popularHotelAdapter = HotelAdapter(HotelAdapter.OnClickListener{ hotelModel ->
+        popularHotelAdapter = PopularHotelAdapter(PopularHotelAdapter.OnClickListener{ hotelModel ->
             val action = DashboardFragmentDirections.actionDashboardFragmentToMenuFragment(hotelModel)
             findNavController().navigate(action)
         })

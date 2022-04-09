@@ -62,4 +62,7 @@ dependencies {
     // Realtime Database library
     implementation 'com.google.firebase:firebase-database'
 
+    // Daraja
+    implementation 'com.androidstudy:daraja:1.0.2'
+
 }

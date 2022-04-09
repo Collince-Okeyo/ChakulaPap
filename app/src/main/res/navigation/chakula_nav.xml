@@ -41,6 +41,9 @@
         <argument
             android:name="confirmDetails"
             app:argType="com.ramgdev.chakulapap.model.Order" />
+        <action
+            android:id="@+id/action_confirmationCustomDialogFragment2_to_orderFragment"
+            app:destination="@id/orderFragment" />
     </fragment>
     <fragment
         android:id="@+id/hotelFragment"
