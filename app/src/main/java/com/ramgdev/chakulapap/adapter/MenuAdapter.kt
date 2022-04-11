@@ -17,7 +17,7 @@ class MenuAdapter(private val onClickListener: OnClickListener) : ListAdapter<Me
         }
 
         override fun areContentsTheSame(oldItem: MenuItems, newItem: MenuItems): Boolean {
-            return newItem.id == newItem.id
+            return oldItem.id == newItem.id
         }
     }
 
@@ -25,9 +25,9 @@ class MenuAdapter(private val onClickListener: OnClickListener) : ListAdapter<Me
         fun bind(menu: MenuItems?) {
             Glide.with(binding.imageViewFood)
                 .load(menu?.menuImage)
-                .centerCrop()
                 .into(binding.imageViewFood)
             binding.textViewFoodName.text = menu?.menuName
+            binding.textViewFoodPrice.text = menu?.menuPrice
         }
     }
 
@@ -38,7 +38,6 @@ class MenuAdapter(private val onClickListener: OnClickListener) : ListAdapter<Me
     override fun onBindViewHolder(holder: MenuViewHolder, position: Int) {
         val menu = getItem(position)
         holder.bind(menu)
-
         holder.itemView.setOnClickListener {
             onClickListener.onClick(menu)
         }

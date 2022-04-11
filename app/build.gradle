@@ -65,4 +65,9 @@ dependencies {
     // Daraja
     implementation 'com.androidstudy:daraja:1.0.2'
 
+    //Timber
+    implementation 'com.jakewharton.timber:timber:5.0.1'
+
+    // Circular Image View
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
 }

@@ -75,34 +75,19 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textview.MaterialTextView
-        android:id="@+id/food_tv"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:text="Food"
-        android:fontFamily="@font/adamina"
-        android:layout_marginTop="8dp"
-        android:textColor="@color/main"
-        android:textSize="18sp"
-        android:textStyle="normal"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/order_food_pic" />
-
-    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/order_food_name"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="16dp"
+        android:fontFamily="@font/adamina"
         android:gravity="center_horizontal"
         android:text="Ugali Mix"
-        android:fontFamily="@font/adamina"
-        android:textColor="#000000"
+        android:textColor="@color/main"
         android:textSize="20sp"
         android:textStyle="bold|italic"
-        app:layout_constraintEnd_toEndOf="@+id/food_tv"
-        app:layout_constraintStart_toStartOf="@+id/food_tv"
-        app:layout_constraintTop_toBottomOf="@+id/food_tv" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/order_food_pic" />
 
     <com.google.android.material.textview.MaterialTextView
         android:id="@+id/textView4"
@@ -125,6 +110,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="1"
+        android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/order_food_table_number_minus"
@@ -153,6 +139,7 @@
         android:layout_height="wrap_content"
         android:gravity="center"
         android:text="1"
+        android:textColor="@color/black"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="@+id/order_food_quantity_minus"
@@ -160,7 +147,7 @@
         app:layout_constraintStart_toEndOf="@+id/order_food_quantity_minus"
         app:layout_constraintTop_toTopOf="@+id/order_food_quantity_minus" />
 
-    <ImageView
+    <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/order_food_pic"
         android:layout_width="150dp"
         android:layout_height="150dp"

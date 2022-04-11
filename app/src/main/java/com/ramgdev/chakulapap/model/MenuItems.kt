@@ -9,10 +9,16 @@ data class MenuItems(
     val menuName:String? = "",
     val menuPrice:String? = "",
     val accountType: String? = "",
-    val accountNumber: String? = ""
+    val accountNumber: String? = "",
+    val foodName: String? = "",
+    val foodPrice: String? = "",
+    val foodUri: String? = ""
 ) : Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readInt(),
+        parcel.readString(),
+        parcel.readString(),
+        parcel.readString(),
         parcel.readString(),
         parcel.readString(),
         parcel.readString(),
@@ -28,6 +34,9 @@ data class MenuItems(
         parcel.writeString(menuPrice)
         parcel.writeString(accountType)
         parcel.writeString(accountNumber)
+        parcel.writeString(foodName)
+        parcel.writeString(foodPrice)
+        parcel.writeString(foodUri)
     }
 
     override fun describeContents(): Int {

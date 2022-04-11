@@ -5,6 +5,8 @@
       <map>
         <entry key="app/src/main/res/drawable/ic_add.xml" value="0.115" />
         <entry key="app/src/main/res/drawable/ic_chevron_left_gray.xml" value="0.1" />
+        <entry key="app/src/main/res/drawable/ic_minus.xml" value="0.122" />
+        <entry key="app/src/main/res/drawable/ic_plus.xml" value="0.122" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18703703703703703" />
         <entry key="app/src/main/res/layout/fragment_confirmation_custom_dialog.xml" value="0.1685185185185185" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1685185185185185" />

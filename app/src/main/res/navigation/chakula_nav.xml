@@ -36,7 +36,7 @@
     </fragment>
     <fragment
         android:id="@+id/confirmationCustomDialogFragment2"
-        android:name="com.ramgdev.chakulapap.ui.order.ConfirmationCustomDialogFragment"
+        android:name="com.ramgdev.chakulapap.ui.order.ConfirmationCustomDialog"
         android:label="ConfirmationCustomDialogFragment" >
         <argument
             android:name="confirmDetails"

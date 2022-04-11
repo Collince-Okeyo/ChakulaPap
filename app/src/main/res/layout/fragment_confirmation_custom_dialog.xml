@@ -18,11 +18,11 @@
         android:fontFamily="sans-serif-condensed-medium"
         android:gravity="center_horizontal"
         android:padding="20dp"
-        app:fontFamily="@font/adamina"
         android:text="You are about to order to Ugali Nyama X2 on table number X \n \nAre you sure you want to proceed with the order? "
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        app:fontFamily="@font/adamina" />
 
 
     <com.google.android.material.textview.MaterialTextView
@@ -36,10 +36,10 @@
         android:layout_marginLeft="40dp"
         android:layout_marginBottom="20dp"
         android:text="Cancel"
-        app:fontFamily="@font/adamina"
         android:textAllCaps="false"
         android:textColor="@color/black"
-        android:textSize="17sp" />
+        android:textSize="17sp"
+        app:fontFamily="@font/adamina" />
 
     <TextView
         android:id="@+id/proceed_action"
