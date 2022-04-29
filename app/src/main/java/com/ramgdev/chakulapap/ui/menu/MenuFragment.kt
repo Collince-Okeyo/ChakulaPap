@@ -100,8 +100,8 @@ class MenuFragment : Fragment() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()){
                         val result = snapshot.getValue(MenuItems::class.java)
-                        binding.textViewPopularFood.text = result?.foodName
-                        binding.textViewPopularFoodPrice.text = result?.foodPrice
+                        /*binding.textViewPopularFood.text = result?.foodName
+                        binding.textViewPopularFoodPrice.text = result?.foodPrice*/
                         Glide.with(binding.imageViewPopularFood)
                             .load(result?.foodUri)
                             .into(binding.imageViewPopularFood)
@@ -116,6 +116,4 @@ class MenuFragment : Fragment() {
                 }
             })
     }
-
-
 }

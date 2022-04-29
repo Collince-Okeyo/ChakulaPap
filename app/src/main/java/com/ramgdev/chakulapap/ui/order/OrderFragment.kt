@@ -1,5 +1,6 @@
 package com.ramgdev.chakulapap.ui.order
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -20,13 +21,13 @@ class OrderFragment : Fragment() {
     private var foodQuantity = 1
     private val args: OrderFragmentArgs by navArgs()
 
+    @SuppressLint("SetTextI18n")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentOrderBinding.inflate(inflater, container, false)
-        val view = binding.root
 
         val food_order = args.foodOrder
 
@@ -36,7 +37,7 @@ class OrderFragment : Fragment() {
 
         var delimiter = "."
         val price = food_order.menuPrice.toString().split(delimiter)
-        Timber.d("onCreateView: " + price)
+        Timber.d("onCreateView: $price")
 
         Glide.with(binding.orderFoodPic)
             .load(food_order.menuImage)
@@ -85,7 +86,7 @@ class OrderFragment : Fragment() {
             val action = OrderFragmentDirections.actionOrderFragmentToConfirmationCustomDialogFragment2(order)
             findNavController().navigate(action)
         }
-        return view
+        return binding.root
     }
     private fun showDialogSheet() {
         ConfirmationCustomDialog().showsDialog

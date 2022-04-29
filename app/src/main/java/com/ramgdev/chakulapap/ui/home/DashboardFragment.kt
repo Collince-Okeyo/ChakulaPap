@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.navigation.fragment.findNavController
 import com.google.firebase.database.*
@@ -30,6 +31,9 @@ class DashboardFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         binding = FragmentDashboardBinding.inflate(inflater, container, false)
+
+        activity?.window?.setSoftInputMode(
+            WindowManager.LayoutParams.SOFT_INPUT_STATE_ALWAYS_HIDDEN);
 
         binding.hotelsRecycler.showShimmerAdapter()
         binding.popularHotelRecycler.showShimmerAdapter()
