@@ -1,9 +1,13 @@
 package com.ramgdev.chakulapap.ui.menu
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
+import android.view.View.INVISIBLE
+import android.view.View.VISIBLE
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.Fragment
@@ -39,10 +43,12 @@ class MenuFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
+
+
         binding =  FragmentMenuBinding.inflate(inflater, container, false)
 
         binding.menuRecycler.showShimmerAdapter()
-
+        showOrders()
         binding.toolbarMenu.title = "${args.hotelargs.hotelName} Hotel Menu"
         binding.toolbarMenu.setNavigationOnClickListener(View.OnClickListener {
             findNavController().navigate(R.id.action_menuFragment_to_dashboardFragment)
@@ -100,8 +106,8 @@ class MenuFragment : Fragment() {
                 override fun onDataChange(snapshot: DataSnapshot) {
                     if (snapshot.exists()){
                         val result = snapshot.getValue(MenuItems::class.java)
-                        /*binding.textViewPopularFood.text = result?.foodName
-                        binding.textViewPopularFoodPrice.text = result?.foodPrice*/
+                        binding.textViewPopularFood.text = result?.foodName
+//                        binding.textViewPopularFoodPrice.text = result?.foodPrice
                         Glide.with(binding.imageViewPopularFood)
                             .load(result?.foodUri)
                             .into(binding.imageViewPopularFood)
@@ -116,4 +122,13 @@ class MenuFragment : Fragment() {
                 }
             })
     }
+
+    private fun showOrders(){
+
+        val sharedPreferences = requireContext().getSharedPreferences("Admin", Context.MODE_PRIVATE)
+        if (sharedPreferences.getBoolean("isAdmin", false)) {
+            binding.textViewPopularFood.visibility = VISIBLE
+        }
+    }
+
 }

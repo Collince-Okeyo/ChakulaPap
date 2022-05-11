@@ -24,7 +24,7 @@ class ScreenThreeFragment : Fragment() {
         binding = FragmentScreenThreeBinding.inflate(inflater, container, false)
 
         binding.buttonFinish.setOnClickListener {
-            findNavController().navigate(R.id.action_viewPagerFragment_to_dashboardFragment)
+            findNavController().navigate(R.id.action_viewPagerFragment_to_landingPageFragment)
             onBoardingFinished()
         }
 

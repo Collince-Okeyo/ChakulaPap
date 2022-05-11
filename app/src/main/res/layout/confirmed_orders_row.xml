@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="15dp"
+    app:cardElevation="15dp"
+    android:layout_margin="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/foodNameTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:text="Ugali Vs Nyama"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/adamina"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/orderPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="200"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/adamina"
+            app:layout_constraintStart_toStartOf="@+id/foodNameTv"
+            app:layout_constraintTop_toBottomOf="@+id/foodNameTv" />
+
+        <TextView
+            android:id="@+id/numberOfOrdersTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="2"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/adamina"
+            app:layout_constraintStart_toStartOf="@+id/orderPrice"
+            app:layout_constraintTop_toBottomOf="@+id/orderPrice" />
+
+        <TextView
+            android:id="@+id/tableNumberTv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="5"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:fontFamily="@font/adamina"
+            app:layout_constraintStart_toStartOf="@+id/numberOfOrdersTv"
+            app:layout_constraintTop_toBottomOf="@+id/numberOfOrdersTv" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

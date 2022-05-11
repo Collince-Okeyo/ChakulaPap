@@ -8,11 +8,18 @@
         <entry key="app/src/main/res/drawable/ic_minus.xml" value="0.122" />
         <entry key="app/src/main/res/drawable/ic_plus.xml" value="0.122" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18703703703703703" />
+        <entry key="app/src/main/res/layout/confirmed_orders_row.xml" value="0.22" />
+        <entry key="app/src/main/res/layout/fragment_admin_login.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_confirmation_custom_dialog.xml" value="0.1685185185185185" />
+        <entry key="app/src/main/res/layout/fragment_confirmed_orders.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1685185185185185" />
+        <entry key="app/src/main/res/layout/fragment_forgot_password.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_hotel.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_landing_page.xml" value="0.17864583333333334" />
+        <entry key="app/src/main/res/layout/fragment_login.xml" value="0.17864583333333334" />
         <entry key="app/src/main/res/layout/fragment_menu.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_order.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/fragment_register.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_screen_one.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_screen_three.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_screen_two.xml" value="0.19375" />
@@ -21,6 +28,7 @@
         <entry key="app/src/main/res/layout/horizontal_shimmer_layout.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/hotels_row.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/menu_row.xml" value="0.19375" />
+        <entry key="app/src/main/res/layout/orders_shimmer.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/other_hotels_row.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/vertical_shimmer_layout.xml" value="0.19375" />
         <entry key="app/src/main/res/menu/menu.xml" value="0.19375" />

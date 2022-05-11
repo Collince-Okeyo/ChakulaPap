@@ -50,29 +50,15 @@
             android:layout_marginStart="16dp"
             android:layout_marginLeft="16dp"
             android:layout_marginTop="8dp"
-            android:text="Rice Viazi and Minji"
+            android:text="View Orders"
             app:fontFamily="@font/adamina"
             android:textColor="@color/white"
             android:textSize="24sp"
+            android:visibility="gone"
             app:layout_constraintEnd_toStartOf="@+id/imageViewPopularFood"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/textViewPopularFoodPrice"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:backgroundTint="@color/white"
-            android:padding="10dp"
-            android:text="KSH. 150"
-            android:fontFamily="@font/adamina"
-            android:textColor="@color/main"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:cornerRadius="15dp"
-            app:layout_constraintStart_toStartOf="@+id/textViewPopularFood"
-            app:layout_constraintTop_toBottomOf="@+id/textViewPopularFood" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <com.cooltechworks.views.shimmer.ShimmerRecyclerView
