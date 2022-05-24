@@ -58,6 +58,10 @@ class MenuFragment : Fragment() {
             .load(args.hotelargs.hotelImage)
             .into(binding.imageViewPopularFood)
 
+        binding.textViewPopularFood.setOnClickListener {
+            findNavController().navigate(R.id.action_menuFragment_to_confirmedOrdersFragment)
+        }
+
         databaseReference = FirebaseDatabase.getInstance().reference
 
         getPopularDish()

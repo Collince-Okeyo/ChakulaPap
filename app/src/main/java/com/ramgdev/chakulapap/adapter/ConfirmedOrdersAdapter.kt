@@ -7,27 +7,28 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.ramgdev.chakulapap.databinding.ConfirmedOrdersRowBinding
+import com.ramgdev.chakulapap.model.MenuItems
 import com.ramgdev.chakulapap.model.Order
 
-class ConfirmedOrdersAdapter() : ListAdapter<Order, ConfirmedOrdersAdapter.OrdersViewHolder>(MenuDiffUtil){
+class ConfirmedOrdersAdapter() : ListAdapter<MenuItems, ConfirmedOrdersAdapter.OrdersViewHolder>(MenuDiffUtil){
 
-    object MenuDiffUtil: DiffUtil.ItemCallback<Order>() {
-        override fun areItemsTheSame(oldItem: Order, newItem: Order): Boolean {
+    object MenuDiffUtil: DiffUtil.ItemCallback<MenuItems>() {
+        override fun areItemsTheSame(oldItem: MenuItems, newItem: MenuItems): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: Order, newItem: Order): Boolean {
-            return oldItem.paymentMode == newItem.paymentMode
+        override fun areContentsTheSame(oldItem: MenuItems, newItem: MenuItems): Boolean {
+            return oldItem.id == newItem.id
         }
     }
 
     inner class OrdersViewHolder(private val binding: ConfirmedOrdersRowBinding): RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("SetTextI18n")
-        fun bind(orders: Order?) {
+        fun bind(orders: MenuItems?) {
             binding.foodNameTv.text = "Food Name ${orders?.foodName}"
-            binding.orderPrice.text = "Price ${orders?.orderAmount}"
-            binding.numberOfOrdersTv.text = "Number of Orders ${orders?.numberOfOrders}"
-            binding.tableNumberTv.text = "Table Number ${orders?.tableNumber}"
+            binding.orderPrice.text = "Price ${orders?.menuPrice}"
+            /*binding.numberOfOrdersTv.text = "Number of Orders ${orders?.numberOfOrders}"
+            binding.tableNumberTv.text = "Table Number ${orders?.tableNumber}"*/
         }
 
     }

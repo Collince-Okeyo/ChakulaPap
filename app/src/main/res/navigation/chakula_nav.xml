@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/chakula_nav"
-    app:startDestination="@id/splashFragment">
+    app:startDestination="@id/landingPageFragment">
 
     <fragment
         android:id="@+id/dashboardFragment"
@@ -118,7 +118,9 @@
             app:destination="@id/viewPagerFragment" />
         <action
             android:id="@+id/action_landingPageFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/chakula_nav"
+            app:popUpToInclusive="false" />
         <action
             android:id="@+id/action_landingPageFragment_to_loginFragment"
             app:destination="@id/loginFragment" />
@@ -139,7 +141,9 @@
             app:destination="@id/registerFragment" />
         <action
             android:id="@+id/action_loginFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/chakula_nav"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/registerFragment"
@@ -159,10 +163,9 @@
             app:destination="@id/menuFragment" />
         <action
             android:id="@+id/action_adminLoginFragment_to_dashboardFragment"
-            app:destination="@id/dashboardFragment" />
-        <action
-            android:id="@+id/action_adminLoginFragment_to_confirmedOrdersFragment"
-            app:destination="@id/confirmedOrdersFragment" />
+            app:destination="@id/dashboardFragment"
+            app:popUpTo="@id/chakula_nav"
+            app:popUpToInclusive="false" />
     </fragment>
     <fragment
         android:id="@+id/confirmedOrdersFragment"
