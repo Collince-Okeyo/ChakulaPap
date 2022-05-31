@@ -37,7 +37,7 @@
         android:layout_marginBottom="20dp"
         android:text="Cancel"
         android:textAllCaps="false"
-        android:textColor="@color/black"
+        android:textColor="#F30326"
         android:textSize="17sp"
         app:fontFamily="@font/adamina" />
 
@@ -51,10 +51,10 @@
         android:layout_centerVertical="true"
         android:layout_marginEnd="40dp"
         android:layout_marginRight="40dp"
-        android:text="Proceed"
         android:fontFamily="@font/adamina"
+        android:text="Proceed"
         android:textAllCaps="false"
-        android:textColor="#FA4A0C"
+        android:textColor="#07C80B"
         android:textSize="17sp" />
 
 </RelativeLayout>

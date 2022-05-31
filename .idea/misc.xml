@@ -10,7 +10,7 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.18703703703703703" />
         <entry key="app/src/main/res/layout/confirmed_orders_row.xml" value="0.22" />
         <entry key="app/src/main/res/layout/fragment_admin_login.xml" value="0.19375" />
-        <entry key="app/src/main/res/layout/fragment_confirmation_custom_dialog.xml" value="0.1685185185185185" />
+        <entry key="app/src/main/res/layout/fragment_confirmation_custom_dialog.xml" value="0.25" />
         <entry key="app/src/main/res/layout/fragment_confirmed_orders.xml" value="0.19375" />
         <entry key="app/src/main/res/layout/fragment_dashboard.xml" value="0.1685185185185185" />
         <entry key="app/src/main/res/layout/fragment_forgot_password.xml" value="0.19375" />

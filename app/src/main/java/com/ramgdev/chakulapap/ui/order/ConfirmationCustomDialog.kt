@@ -29,7 +29,7 @@ class ConfirmationCustomDialog : BottomSheetDialogFragment() {
     private val args: ConfirmationCustomDialogArgs by navArgs()
 
     private val daraja: Daraja = Daraja.with(
-        "9D5TyyECucNCgpYGlLYjO9bCy9PpFPVy", "k8tgCVTyzWQPWJl1", Env.SANDBOX,
+        "5aIbhQsfobZG4VMv8zuIRuwKyocTyhEU", "9Gd9YP4VlQHXaJeO", Env.SANDBOX,
         object : DarajaListener<AccessToken> {
             override fun onResult(result: AccessToken) {
                 Timber.d("Access Token: ${result.access_token}")
@@ -67,7 +67,7 @@ class ConfirmationCustomDialog : BottomSheetDialogFragment() {
         }
         binding.cancelAction.setOnClickListener {
             ConfirmationCustomDialog().dialog?.dismiss()
-            findNavController().navigate(R.id.action_confirmationCustomDialogFragment2_to_orderFragment)
+            //findNavController().navigate(R.id.action_confirmationCustomDialogFragment2_to_orderFragment)
         }
         return binding.root
     }
@@ -104,7 +104,7 @@ class ConfirmationCustomDialog : BottomSheetDialogFragment() {
             phone,
             "https://mycallback.com",
             "001ABC",
-            "Goods Payment"
+            "Food Payment"
         )
 
         daraja.requestMPESAExpress(lnmExpress, object :

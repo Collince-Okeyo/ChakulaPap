@@ -65,13 +65,13 @@ class OrderFragment : Fragment() {
             }
             val toStr = foodQuantity
             binding.orderFoodQuantity.text = toStr.toString()
-            binding.orderFoodBtn.text = "Ksh." + (toStr * price[1].toInt()).toString()
+            binding.orderFoodBtn.text = "Pay Ksh." + (toStr * price[1].toInt()).toString().trim()
         }
         binding.orderFoodQuantityAdd.setOnClickListener {
             foodQuantity += 1
             val toStr = foodQuantity
             binding.orderFoodQuantity.text = toStr.toString()
-            binding.orderFoodBtn.text = "Ksh." + (toStr * price[1].toInt()).toString()
+            binding.orderFoodBtn.text = "Pay Ksh." + (toStr * price[1].toInt()).toString().trim()
         }
         binding.orderFoodBtn.setOnClickListener {
             ConfirmationCustomDialog().showsDialog
@@ -87,13 +87,6 @@ class OrderFragment : Fragment() {
             findNavController().navigate(action)
         }
         return binding.root
-    }
-    private fun showDialogSheet() {
-        ConfirmationCustomDialog().showsDialog
-    }
-
-    private fun setTarget() {
-        findNavController().navigate(R.id.action_orderFragment_to_confirmationCustomDialogFragment2)
     }
 
 }
