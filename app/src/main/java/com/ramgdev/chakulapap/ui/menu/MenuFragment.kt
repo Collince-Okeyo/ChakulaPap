@@ -24,7 +24,6 @@ import timber.log.Timber
 class MenuFragment : Fragment() {
     private lateinit var binding: FragmentMenuBinding
     private val args: MenuFragmentArgs by navArgs()
-    private lateinit var menuItems: MenuItems
     private lateinit var databaseReference: DatabaseReference
     private val menuAdapter by lazy {
         com.ramgdev.chakulapap.adapter.MenuAdapter(com.ramgdev.chakulapap.adapter.MenuAdapter.OnClickListener{ item ->

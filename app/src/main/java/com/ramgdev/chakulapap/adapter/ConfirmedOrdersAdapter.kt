@@ -7,28 +7,30 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.ramgdev.chakulapap.databinding.ConfirmedOrdersRowBinding
+import com.ramgdev.chakulapap.model.ConOrders
 import com.ramgdev.chakulapap.model.MenuItems
 import com.ramgdev.chakulapap.model.Order
 
-class ConfirmedOrdersAdapter() : ListAdapter<MenuItems, ConfirmedOrdersAdapter.OrdersViewHolder>(MenuDiffUtil){
+class ConfirmedOrdersAdapter() : ListAdapter<ConOrders, ConfirmedOrdersAdapter.OrdersViewHolder>(MenuDiffUtil){
 
-    object MenuDiffUtil: DiffUtil.ItemCallback<MenuItems>() {
-        override fun areItemsTheSame(oldItem: MenuItems, newItem: MenuItems): Boolean {
+    object MenuDiffUtil: DiffUtil.ItemCallback<ConOrders>() {
+        override fun areItemsTheSame(oldItem: ConOrders, newItem: ConOrders): Boolean {
             return oldItem == newItem
         }
 
-        override fun areContentsTheSame(oldItem: MenuItems, newItem: MenuItems): Boolean {
+        override fun areContentsTheSame(oldItem: ConOrders, newItem: ConOrders): Boolean {
             return oldItem.id == newItem.id
         }
     }
 
     inner class OrdersViewHolder(private val binding: ConfirmedOrdersRowBinding): RecyclerView.ViewHolder(binding.root) {
         @SuppressLint("SetTextI18n")
-        fun bind(orders: MenuItems?) {
+        fun bind(orders: ConOrders?) {
             binding.foodNameTv.text = "Food Name ${orders?.foodName}"
-            binding.orderPrice.text = "Price ${orders?.menuPrice}"
-            /*binding.numberOfOrdersTv.text = "Number of Orders ${orders?.numberOfOrders}"
-            binding.tableNumberTv.text = "Table Number ${orders?.tableNumber}"*/
+            binding.orderPrice.text = "Price ${orders?.customerName}"
+            binding.orderPrice.text = "Price ${orders?.numberOfOrders}"
+            binding.orderPrice.text = "Price ${orders?.orderPrice}"
+            binding.orderPrice.text = "Price ${orders?.tableNumber}"
         }
 
     }
